@@ -1,0 +1,82 @@
+[
+  {
+    "numero": "420",
+    "nombre": "Sucursal Centro Porteño",
+    "direccion": "Maipú, 440, San Nicolas",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "033",
+    "nombre": "Sucursal Tribunales",
+    "direccion": "Av. Corrientes, 1427, San Cristobal",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "767",
+    "nombre": "Sucursal Macrocentro",
+    "direccion": "Viamonte, 1548, Monserrat",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "000",
+    "nombre": "Sucursal Casa Central - Work Café",
+    "direccion": "Bartolome Mitre, 480, Microcentro",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "762",
+    "nombre": "Sucursal Cerrito",
+    "direccion": "Av. Santa Fe, 1146, Microcentro",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "169",
+    "nombre": "Sucursal Congreso",
+    "direccion": "Av. Callao, 349, Colegiales",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "413",
+    "nombre": "Sucursal Alem",
+    "direccion": "Av. Leandro N. Alem, 456, Centro",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "005",
+    "nombre": "Sucursal Monserrat",
+    "direccion": "Av. Belgrano, 980, Monserrat",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "812",
+    "nombre": "Sucursal Work Café - Recoleta",
+    "direccion": "Av. Santa Fe, 1634, Recoleta",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  },
+  {
+    "numero": "109",
+    "nombre": "Sucursal Juncal",
+    "direccion": "Juncal, 735, Microcentro",
+    "horarios": null,
+    "telefono": null,
+    "coordenadas": null
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "santander-scraper",
+  "version": "1.0.0",
+  "description": "Scraper de beneficios, productos financieros y sucursales de Banco Santander Argentina",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  },
+  "license": "ISC"
+}
