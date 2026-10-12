@@ -1,10 +1,10 @@
- Scraper de Beneficios, Productos y Sucursales - Banco Santander Argentina
+Scraper de Beneficios, Productos y Sucursales - Banco Santander Argentina
 
 Script automatizado de web scraping desarrollado en Node.js con Puppeteer. Extrae y procesa de forma estructurada las promociones vigentes, la oferta de productos financieros y la red de sucursales del portal oficial de Banco Santander Argentina.
 
 ---
 
- Estructura del Proyecto
+Estructura del Proyecto
 
 supermercado-scraper/
 ├── index.js
@@ -24,7 +24,7 @@ end-to-end.
 
 ---
 
- Requisitos Previos
+Requisitos Previos
 
 - Node.js (v16.0.0 o superior recomendado)
 - npm (Administrador de paquetes de Node)
@@ -32,7 +32,7 @@ end-to-end.
 
 ---
 
- Configuración
+Configuración
 
 Al inicio de `index.js`, el objeto `CONFIG` expone dos flags relevantes:
 - `HEADLESS` (default `true`): controla si el navegador corre sin ventana
@@ -44,7 +44,7 @@ Al inicio de `index.js`, el objeto `CONFIG` expone dos flags relevantes:
 
 ---
 
- Instalación y Ejecución
+Instalación y Ejecución
 
 1. Instalar las dependencias del proyecto:
    npm install
@@ -76,9 +76,9 @@ Al inicio de `index.js`, el objeto `CONFIG` expone dos flags relevantes:
 
 ---
 
- Notas Técnicas y Decisiones de Arquitectura
+Notas Técnicas y Decisiones de Arquitectura
 
- 1. Extracción de promociones: interceptación de la API interna
+1. Extracción de promociones: interceptación de la API interna
 La SPA de beneficios consulta, por detrás, un endpoint que devuelve el
 listado de promociones ya estructurado (marca, descuento, tope, vigencia,
 días válidos) en JSON. El script se suscribe a `page.on('response', ...)`
@@ -103,7 +103,7 @@ al identificador del propio Santander como cliente de la plataforma de
 beneficios (patrón habitual en plataformas de fidelización que sirven a
 varios bancos/comercios bajo un mismo dominio).
 
- 2. Manejo de Single Page Application (SPA)
+2. Manejo de Single Page Application (SPA)
 El sitio no opera como un e-commerce estático, sino como una SPA con
 ruteo por hash (React Router: `#/beneficios`, `#/cajeros-y-sucursales`) y
 renderizado dinámico y asincrónico. El script combina:
@@ -115,7 +115,7 @@ renderizado dinámico y asincrónico. El script combina:
 - Polling activo (`esperarCargaCompleta`) que revisa si el texto
   "Cargando..." sigue presente antes de dar por terminada la carga.
 
- 3. Adaptación del modelo de datos al dominio bancario
+3. Adaptación del modelo de datos al dominio bancario
 Al no tratarse de un supermercado con precio de lista tradicional o SKU de
 góndola, la lógica de extracción se adaptó a la naturaleza del dominio:
 1. Productos: como Santander no expone `schema.org/Product` ni SKU, se
@@ -139,7 +139,7 @@ góndola, la lógica de extracción se adaptó a la naturaleza del dominio:
    quedan en `null`; no es un error de extracción, es información que esa
    pantalla no expone.
 
- 4. Robustez ante cambios de build (styled-components)
+4. Robustez ante cambios de build (styled-components)
 El frontend usa styled-components (React), que regenera clases CSS
 hasheadas en cada deploy. El script evita depender de esos nombres de
 clase volátiles y en su lugar detecta patrones estructurales estables
@@ -147,7 +147,7 @@ clase volátiles y en su lugar detecta patrones estructurales estables
 Nombre`"), lo que le da mayor durabilidad frente a futuras
 actualizaciones del sitio.
 
-### 5. Tolerancia a fallos
+5. Tolerancia a fallos
 El sitio es una SPA y ocasionalmente falla la navegación (timeouts, el
 error "Navigating frame was detached" cuando la página se re-renderiza
 durante la carga). Para que una corrida no se pierda por un fallo
@@ -165,13 +165,16 @@ transitorio:
 
 ---
 
- Solución de Problemas Comunes
+Solución de Problemas Comunes
 
-- `Error: Could not find Chrome (ver. X.X.X.X)`: correr
-  `npx puppeteer browsers install chrome` en la carpeta del proyecto. Si el
-  entorno bloquea la descarga (antivirus/firewall corporativo), se puede
-  apuntar Puppeteer al Chrome ya instalado en el sistema agregando
-  `executablePath` en `puppeteer.launch()`.
+- `Error: Could not find Chrome (ver. X.X.X.X)`: el script busca el
+  navegador automáticamente en este orden: (1) la variable de entorno
+  `CHROME_PATH`, si está definida; (2) el Chrome que descarga Puppeteer; (3)
+  un Chrome instalado en el sistema (rutas habituales de Windows, macOS y
+  Linux). Si no encuentra ninguno, correr `npx puppeteer browsers install
+  chrome` en la carpeta del proyecto. Si el entorno bloquea esa descarga
+  (antivirus/firewall), alcanza con tener Google Chrome instalado, o
+  indicar su ruta con `CHROME_PATH`.
 - Alguna sección devuelve un array vacío: revisar la consola — el
   script loguea en qué paso se cortó (timeout de selector, error de
   página, etc.). Activar `CONFIG.DEBUG = true` agrega logs adicionales y

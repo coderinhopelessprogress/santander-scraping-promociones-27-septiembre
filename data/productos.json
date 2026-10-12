@@ -1,45 +1,5 @@
 [
   {
-    "nombre": "Cuentas y Paquetes",
-    "precio": null,
-    "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual durante los primeros 6 (seis) meses desde el alta del producto",
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes#0_Infinity-Gold",
-    "descripción": "Infinity Gold",
-    "condiciones": "Sujeto a aprobación crediticia y a las condiciones de contratación del Banco Santander Argentina S. | Sujeto a aprobación crediticia y a condiciones de contratación de Banco Santander Argentina S.",
-    "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes#0_Infinity-Gold"
-  },
-  {
-    "nombre": "Cuentas y Paquetes",
-    "precio": null,
-    "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual durante los primeros 6 (seis) meses desde el alta del producto",
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes#1_Infinity",
-    "descripción": "Infinity Gold",
-    "condiciones": "Sujeto a aprobación crediticia y a las condiciones de contratación del Banco Santander Argentina S. | Sujeto a aprobación crediticia y a condiciones de contratación de Banco Santander Argentina S.",
-    "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes#1_Infinity"
-  },
-  {
-    "nombre": "Cuentas y Paquetes",
-    "precio": null,
-    "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual durante los primeros 6 (seis) meses desde el alta del producto",
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes#2_Supercuenta-3",
-    "descripción": "Infinity Gold",
-    "condiciones": "Sujeto a aprobación crediticia y a las condiciones de contratación del Banco Santander Argentina S. | Sujeto a aprobación crediticia y a condiciones de contratación de Banco Santander Argentina S.",
-    "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes#2_Supercuenta-3"
-  },
-  {
-    "nombre": "Cuentas y Paquetes",
-    "precio": null,
-    "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual durante los primeros 6 (seis) meses desde el alta del producto",
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes#3_SuperCuenta-con-chequera",
-    "descripción": "Infinity Gold",
-    "condiciones": "Sujeto a aprobación crediticia y a las condiciones de contratación del Banco Santander Argentina S. | Sujeto a aprobación crediticia y a condiciones de contratación de Banco Santander Argentina S.",
-    "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes#3_SuperCuenta-con-chequera"
-  },
-  {
     "nombre": "Conocé una nueva forma de manejar tu plata",
     "precio": null,
     "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual hasta el 30/11/2028 o hasta cumplir 32 años, lo que suceda primero",
@@ -60,7 +20,7 @@
     "url_producto": "https://www.santander.com.ar/personas/plan-sueldo"
   },
   {
-    "nombre": "Siempre es mejor\nempezar por algo,\nque nunca empezar",
+    "nombre": "Siempre es mejor empezar por algo, que nunca empezar",
     "precio": "76,00 %",
     "precio_descuento": null,
     "imagen": "https://www.santander.com.ar/api/images/header_mobile_prestamos_personales_915c765984_db66f92398.png?w=3840&q=50&updated_at=2025-04-15T00:55:52.425Z",
@@ -80,7 +40,7 @@
     "url_producto": "https://www.santander.com.ar/personas/prestamos/hipotecarios-uva"
   },
   {
-    "nombre": "Pagá tu vehículo en partes.Disfrutalo completo.",
+    "nombre": "Pagá tu vehículo en partes. Disfrutalo completo.",
     "precio": null,
     "precio_descuento": null,
     "imagen": "https://www.santander.com.ar/api/images/background_rounded_0000s_0001_Adobe_Stock_714337425_ebe567883f.jpg",
@@ -90,7 +50,7 @@
     "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios#1_Personas"
   },
   {
-    "nombre": "Súper Préstamo Personal",
+    "nombre": "Súper Préstamo Personal",
     "precio": "42%",
     "precio_descuento": null,
     "imagen": "https://www.santander.com.ar/api/images/ico_rojo_energia_solar_a9e16e81b2.png?updated_at=2023-12-27T16:53:40.746Z",
@@ -110,16 +70,6 @@
     "url_producto": "https://www.santander.com.ar/personas/prestamos/cuotificacion"
   },
   {
-    "nombre": "Parece que esta página se perdió.",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prestamos/para-fines-no-determinados-lanzamiento",
-    "descripción": null,
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/prestamos/para-fines-no-determinados-lanzamiento"
-  },
-  {
     "nombre": "Pedí tu crédito prendario con una Tasa Especial del 54,90%(**)",
     "precio": null,
     "precio_descuento": null,
@@ -127,66 +77,6 @@
     "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
     "descripción": "Pedí tu crédito prendario con una Tasa Especial del 54,90% | (**) | Elegí qué te querés comprar y simulá tu crédito. | Solo con tu DNI vas a poder verificar si aplicás a la Tasa Especial y obtener la aprobación inmediata. | (**) Podrás solicitarlo si no estás informado/a como deudor/a en la Central de Deudores de BCRA a diciembre 2020. El otorgamiento y aprobación del crédito y de la garantía estará sujeto a aprobación crediticia.",
     "condiciones": "sujeto a aprobación crediticia.",
-    "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
-  },
-  {
-    "nombre": "Tenemos todos estos productos para vos.",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
-    "descripción": "Tenemos todos estos productos para vos.",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
-  },
-  {
-    "nombre": "Personas",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
-    "descripción": "Personas | Estás viendo",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
-  },
-  {
-    "nombre": "Empresas y Agro",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
-    "descripción": "Empresas y Agro",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
-  },
-  {
-    "nombre": "Acceso a Concesionarios",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
-    "descripción": "Acceso a Concesionarios",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
-  },
-  {
-    "nombre": "Tenemos todos estos productos para tu empresa.",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
-    "descripción": "Tenemos todos estos productos para tu empresa.",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
-  },
-  {
-    "nombre": "Otros productos que te podrían interesar",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios",
-    "descripción": "Otros productos que te podrían interesar",
-    "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
   },
   {
@@ -246,26 +136,6 @@
     "imagen": null,
     "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes",
     "descripción": "SuperCuenta con chequera",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes"
-  },
-  {
-    "nombre": "Sacá tu cuenta gratis y si la usás, no pagás el mantenimiento",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes",
-    "descripción": "Sacá tu | cuenta gratis | y si la usás, no pagás el mantenimiento | Disfruta de 6 meses sin cargo y si cumplís con alguna de las siguientes condiciones te mantenemos la bonificación de la cuenta | (*)",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes"
-  },
-  {
-    "nombre": "Todo a un precio único, mensual y transparente",
-    "precio": null,
-    "precio_descuento": null,
-    "imagen": null,
-    "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes",
-    "descripción": "Todo a un | precio | único, mensual y transparente | Pedí hoy | Infinity Gold | con un precio único y mensual de | $ 46.000 más impuestos, precio final $ 55.660 | Accedé a Infinity Gold con mínimos requisitos: | Ingresos mínimos netos mensuales | $2.100.000 | Antigüedad laboral mínima: 6 meses | Si sos autónomo: DNI, CUIT/CUIL ó monotributo. | Si trabajás en relación de dependencia: DNI, CUIT/CUIL, recibo de sueldo.",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": "https://www.santander.com.ar/personas/cuentas-y-paquetes"
   },

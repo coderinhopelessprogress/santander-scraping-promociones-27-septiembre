@@ -859,6 +859,33 @@ function extraerTarjetasInformativasDesdeHub() {
   });
 }
 
+// Títulos que aparecen en las páginas de producto de Santander pero no
+// corresponden a un producto: páginas de error, encabezados de sección,
+// pestañas de navegación y banners promocionales genéricos.
+const PATRONES_NO_PRODUCTO = [
+  /p[aá]gina se perdi[oó]/i,
+  /^cuentas y paquetes$/i,
+  /^(personas|empresas( y agro)?|acceso a concesionarios)$/i,
+  /^tenemos todos estos productos/i,
+  /^otros productos que te podr[ií]an interesar/i,
+  /^sac[aá] tu cuenta gratis/i,
+  /^todo a un precio [uú]nico/i,
+];
+
+// Unifica espacios y saltos de línea, y separa frases pegadas
+// ("partes.Disfrutalo" -> "partes. Disfrutalo").
+function normalizarNombreProducto(nombre) {
+  return String(nombre || '')
+    .replace(/\s+/g, ' ')
+    .replace(/\.(?=[A-ZÁÉÍÓÚÑ])/g, '. ')
+    .trim();
+}
+
+function esNombreDeProductoValido(nombre) {
+  if (!nombre || nombre.length < 3) return false;
+  return !PATRONES_NO_PRODUCTO.some((patron) => patron.test(nombre));
+}
+
 async function scrapearDetalleProducto(page, url) {
   const intentos = 2;
   for (let intento = 1; intento <= intentos; intento++) {
@@ -954,6 +981,11 @@ async function scrapearProductos(browser) {
 
           const producto = await scrapearDetalleProducto(page, link);
           if (producto) {
+            producto.nombre = normalizarNombreProducto(producto.nombre);
+            if (!esNombreDeProductoValido(producto.nombre)) {
+              console.log(`  - Descartado (no es un producto): ${producto.nombre}`);
+              continue;
+            }
             productos.push(producto);
             console.log(`  + ${producto.nombre}`);
           }
@@ -966,8 +998,8 @@ async function scrapearProductos(browser) {
 
         tarjetas.forEach((t) => {
           const textosLimpios = t.textos.filter((x) => !esTextoBasura(x));
-          const nombre = t.nombre || textosLimpios[0] || null;
-          if (!nombre) return;
+          const nombre = normalizarNombreProducto(t.nombre || textosLimpios[0] || '');
+          if (!esNombreDeProductoValido(nombre)) return;
 
           const matchTasa = t.textoCompleto.match(REGEX_TASA);
           const matchBonif = t.textoCompleto.match(REGEX_BONIFICACION);
@@ -1578,17 +1610,45 @@ async function cerrarNavegador(browser) {
 // ============================================================
 // ORQUESTADOR PRINCIPAL
 // ============================================================
+// Determina qué binario de Chrome usar, en este orden:
+//   1. Variable de entorno CHROME_PATH (para forzar una ruta concreta).
+//   2. El Chrome que descarga Puppeteer, si está presente y completo.
+//   3. Un Chrome instalado en el sistema (rutas habituales de Windows, macOS y Linux).
+// Si no encuentra ninguno devuelve undefined y Puppeteer informa el error
+// habitual, indicando que hay que correr `npx puppeteer browsers install chrome`.
+function resolverRutaChrome() {
+  if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
+    return process.env.CHROME_PATH;
+  }
+
+  try {
+    const rutaPuppeteer = puppeteer.executablePath();
+    if (rutaPuppeteer && fs.existsSync(rutaPuppeteer)) return rutaPuppeteer;
+  } catch (err) {
+    // Puppeteer no pudo calcular la ruta de su propio binario: se prueba con el del sistema.
+  }
+
+  const candidatos = [
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+    process.env.LOCALAPPDATA &&
+      path.join(process.env.LOCALAPPDATA, 'Google', 'Chrome', 'Application', 'chrome.exe'),
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    '/usr/bin/google-chrome',
+    '/usr/bin/chromium',
+    '/usr/bin/chromium-browser',
+  ].filter(Boolean);
+
+  return candidatos.find((ruta) => fs.existsSync(ruta));
+}
+
 async function main() {
   console.log('Iniciando navegador...');
   const browser = await puppeteer.launch({
     headless: CONFIG.HEADLESS,
     defaultViewport: { width: 1366, height: 900 },
     args: CONFIG.HEADLESS ? [] : ['--start-maximized'],
-    // Usa el Chrome ya instalado en el sistema en vez de que Puppeteer
-    // descargue su propia copia. Ajustar la ruta si el Chrome local está
-    // en otra ubicación, o quitar esta línea si se prefiere que Puppeteer
-    // gestione su propio binario (requiere `npx puppeteer browsers install chrome`).
-    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    executablePath: resolverRutaChrome(),
   });
 
   try {
