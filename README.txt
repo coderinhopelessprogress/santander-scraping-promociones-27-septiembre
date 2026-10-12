@@ -147,6 +147,22 @@ clase volátiles y en su lugar detecta patrones estructurales estables
 Nombre`"), lo que le da mayor durabilidad frente a futuras
 actualizaciones del sitio.
 
+### 5. Tolerancia a fallos
+El sitio es una SPA y ocasionalmente falla la navegación (timeouts, el
+error "Navigating frame was detached" cuando la página se re-renderiza
+durante la carga). Para que una corrida no se pierda por un fallo
+transitorio:
+- Cada módulo (promociones, productos, sucursales) se reintenta hasta 3
+  veces si devuelve una lista vacía.
+- El detalle de cada producto se reintenta una vez con una condición de
+  carga menos estricta (`domcontentloaded`).
+- Si un módulo termina vacío después de los reintentos y ya existe una
+  versión previa del archivo en `data/`, se conserva la anterior en lugar
+  de pisarla con un array vacío.
+- El cierre del navegador ignora el error `EBUSY` que Windows puede
+  lanzar al borrar el perfil temporal de Chrome, ya que ocurre después de
+  guardar los resultados y no los afecta.
+
 ---
 
 ## Solución de Problemas Comunes

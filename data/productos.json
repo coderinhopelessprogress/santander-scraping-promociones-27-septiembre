@@ -52,7 +52,7 @@
   {
     "nombre": "Cuenta Sueldo",
     "precio": null,
-    "precio_descuento": "Bonificación del 30% en compra y/o venta de Acciones, Bonos y Cedears(3)\n\nConocé más\n\nTasa preferencial en préstamos personales\n\nConocé más\n\nAdelanto de sueldo ¡Por acreditar tu sueldo en Santander, tenés disponible un adelanto de sueldo(6) que podrás solicitar 100% online, en pocos pasos y lo devolvés en 2 cuotas!\n\nConocé más\n\n \n\nY si te adherís a nuestros programa exclusivo de beneficios tenés \n el primer mes 100% bonificado \n\n \n\n\tHasta un 30% en supermercados, combustible, farmacia, indumentaria y mucho más",
+    "precio_descuento": "Bonificación del 30% en compra y/o venta de Acciones, Bonos y Cedears(3)\n\nConocé más\n\nSuper Ahorro $ disponible 24/7\nPodés disponer de tu dinero cuando vos quieras, las 24 horas, los 7 días de la semana, gracias al nuevo rescate 24/7 disponible para el Ahorro $(9)\n\nConocé más\n\nTasa preferencial en préstamos personales\n\nConocé más\n\nAdelanto de sueldo ¡Por acreditar tu sueldo en Santander, tenés disponible un adelanto de sueldo(6) que podrás solicitar 100% online, en pocos pasos y lo devolvés en 2 cuotas!\n\nConocé más\n\n \n\nY si te adherís a nuestros programa exclusivo de beneficios tenés \n el primer mes 100% bonificado \n\n \n\n\tHasta un 30% en supermercados, combustible, farmacia, indumentaria y mucho más",
     "imagen": "https://www.santander.com.ar/api/images/D_Slide_APP_BENEFICIOS_PROMOCIONES_copia_b0579667f1.jpg?updated_at=2025-11-07T16:00:53.354Z",
     "código": "https://www.santander.com.ar/personas/plan-sueldo",
     "descripción": "Cuenta Sueldo ¡Cobrá tu sueldo u honorario en Santander y aprovechá los mejores beneficios!",
@@ -61,22 +61,22 @@
   },
   {
     "nombre": "Siempre es mejor\nempezar por algo,\nque nunca empezar",
-    "precio": "79,00 %",
+    "precio": "76,00 %",
     "precio_descuento": null,
     "imagen": "https://www.santander.com.ar/api/images/header_mobile_prestamos_personales_915c765984_db66f92398.png?w=3840&q=50&updated_at=2025-04-15T00:55:52.425Z",
     "código": "https://www.santander.com.ar/personas/prestamos/personales",
     "descripción": null,
-    "condiciones": "Tasa Fija Nominal Anual: 79,00 %. | Sistema de amortización francés. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Comisión por cancelación anticipada: 4% +IVA(*) sobre el monto a pre-cancelar.",
+    "condiciones": "Tasa Fija Nominal Anual: 76,00 %. | Sistema de amortización francés. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Comisión por cancelación anticipada: 4% +IVA(*) sobre el monto a pre-cancelar.",
     "url_producto": "https://www.santander.com.ar/personas/prestamos/personales"
   },
   {
     "nombre": "Súper Préstamo Hipotecario UVA",
-    "precio": "9,5%",
+    "precio": "7,5%",
     "precio_descuento": null,
-    "imagen": "https://www.santander.com.ar/api/images/ico_rojo_calendar_256_f09b165f41.png?updated_at=null",
+    "imagen": "https://www.santander.com.ar/api/images/imagen_hipotecarios_imagen_1_ece22e67d0.png?updated_at=2026-09-29T14:18:56.141Z",
     "código": "https://www.santander.com.ar/personas/prestamos/hipotecarios-uva",
     "descripción": null,
-    "condiciones": "Sistema de amortización Francés. | Comisión por cancelación anticipada: 3,00% + IVA sobre el monto a precancelar. | comisión por cancelación anticipada total solo será aplicada cuando al momento de la cancelación, no hayan transcurrido al menos la cuarta parte del plazo original del préstamo o 180 días desde su otorgamiento, de ambos el mayor. | Tasa fija nominal anual: 9,5% Tasa efectiva anual: 9,92%. | Comisión por cancelación anticipada: 3,00% + IVA sobre el monto a precancelar.",
+    "condiciones": "Sistema de amortización francés. | Comisión por cancelación anticipada: 3,00% + IVA sobre el monto a precancelar. | comisión por cancelación anticipada total solo será aplicada cuando al momento de la cancelación, no hayan transcurrido al menos la cuarta parte del plazo original del préstamo o 180 días desde su otorgamiento, de ambos el mayor. | Tasa fija nominal anual: 7,5% Tasa efectiva anual: 7,76%. | Comisión por cancelación anticipada: 3,00% + IVA sobre el monto a precancelar.",
     "url_producto": "https://www.santander.com.ar/personas/prestamos/hipotecarios-uva"
   },
   {
@@ -91,22 +91,22 @@
   },
   {
     "nombre": "Súper Préstamo Personal",
-    "precio": "45%",
+    "precio": "42%",
     "precio_descuento": null,
     "imagen": "https://www.santander.com.ar/api/images/ico_rojo_energia_solar_a9e16e81b2.png?updated_at=2023-12-27T16:53:40.746Z",
     "código": "https://www.santander.com.ar/personas/prestamos/sustentables",
     "descripción": null,
-    "condiciones": "Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Tasa Fija Nominal Anual: 45%. | Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor.",
+    "condiciones": "Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Tasa Fija Nominal Anual: 42%. | Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor.",
     "url_producto": "https://www.santander.com.ar/personas/prestamos/sustentables"
   },
   {
     "nombre": "¿Compraste con débito y ahora necesitás el efectivo?",
-    "precio": "79,00 %",
+    "precio": "76,00%",
     "precio_descuento": null,
     "imagen": "https://www.santander.com.ar/api/images/IMG_cuotifiacacion_celular_d737d6cccc.jpg?updated_at=2023-06-01T22:02:49.335Z",
     "código": "https://www.santander.com.ar/personas/prestamos/cuotificacion",
     "descripción": null,
-    "condiciones": "Tasa Fija Nominal Anual: 79,00 %. | Sistema de amortización francés. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Comisión por cancelación anticipada total: 4% + IVA (*) sobre el monto a pre-cancelar.",
+    "condiciones": "Tasa Fija Nominal Anual: 76,00%. | Sistema de amortización francés. | Sistema de amortización francés. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Comisión por cancelación anticipada total: 4% + IVA (*) sobre el monto a pre-cancelar.",
     "url_producto": "https://www.santander.com.ar/personas/prestamos/cuotificacion"
   },
   {

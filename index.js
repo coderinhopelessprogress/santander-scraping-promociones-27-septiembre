@@ -860,9 +860,25 @@ function extraerTarjetasInformativasDesdeHub() {
 }
 
 async function scrapearDetalleProducto(page, url) {
+  const intentos = 2;
+  for (let intento = 1; intento <= intentos; intento++) {
+    const resultado = await intentarScrapearDetalleProducto(page, url, intento);
+    if (resultado !== undefined) return resultado;
+  }
+  return null;
+}
+
+// Devuelve el producto (u null si la página no es un producto válido) y
+// `undefined` si hubo un error transitorio de navegación que amerita reintento.
+// El segundo intento usa una condición de carga menos exigente
+// (domcontentloaded) para tolerar páginas con requests de red lentos.
+async function intentarScrapearDetalleProducto(page, url, intento) {
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 45000 });
-    await new Promise((r) => setTimeout(r, 1500));
+    await page.goto(url, {
+      waitUntil: intento === 1 ? 'networkidle2' : 'domcontentloaded',
+      timeout: 45000,
+    });
+    await new Promise((r) => setTimeout(r, intento === 1 ? 1500 : 4000));
 
     const jsonLd = await page.evaluate(extraerProductoDesdeJsonLd);
     const dom = await page.evaluate(extraerProductoDesdeDom);
@@ -884,8 +900,8 @@ async function scrapearDetalleProducto(page, url) {
       url_producto: url,
     };
   } catch (err) {
-    console.error(`  ! Error en detalle de producto (${url}):`, err.message);
-    return null;
+    console.error(`  ! Error en detalle de producto (${url}) [intento ${intento}]:`, err.message);
+    return undefined;
   }
 }
 
@@ -1508,6 +1524,58 @@ async function scrapearSucursales(browser) {
 }
 
 // ============================================================
+// UTILIDADES DE EJECUCIÓN
+// ============================================================
+
+// Ejecuta un módulo de scraping y, si devuelve una lista vacía (fallo
+// transitorio de navegación, timeout, redirección de la SPA), lo reintenta
+// hasta `intentos` veces antes de darlo por vacío.
+async function reintentarSiVacio(nombre, funcionScraping, intentos = 3) {
+  let resultado = [];
+  for (let intento = 1; intento <= intentos; intento++) {
+    resultado = await funcionScraping();
+    if (Array.isArray(resultado) && resultado.length > 0) return resultado;
+    if (intento < intentos) {
+      console.log(`  [${nombre}] resultado vacío, reintentando (${intento}/${intentos - 1})...`);
+      await new Promise((r) => setTimeout(r, 3000));
+    }
+  }
+  return Array.isArray(resultado) ? resultado : [];
+}
+
+// Guarda un array como JSON formateado. Si el resultado está vacío y ya
+// existe una versión previa del archivo, la conserva: un scraping fallido
+// no debe pisar datos válidos de una corrida anterior.
+function guardarJson(ruta, datos, etiqueta) {
+  if (datos.length === 0 && fs.existsSync(ruta)) {
+    console.warn(`⚠ ${etiqueta}: resultado vacío, se conserva el archivo anterior sin modificar.`);
+    return;
+  }
+  fs.writeFileSync(ruta, JSON.stringify(datos, null, 2), 'utf-8');
+  console.log(`✔ ${etiqueta} guardado (${datos.length} ítems) en: ${ruta}`);
+}
+
+// En Windows, Chrome a veces mantiene bloqueado un archivo del perfil
+// temporal (Crashpad) cuando Puppeteer intenta borrarlo al cerrar, lo que
+// lanza EBUSY/EPERM después de que los datos ya fueron guardados. Es un
+// error de limpieza sin impacto en los resultados, así que se ignora.
+process.on('unhandledRejection', (err) => {
+  const codigo = err && err.code;
+  if (codigo === 'EBUSY' || codigo === 'EPERM') return;
+  console.error('Error no controlado:', err);
+  process.exitCode = 1;
+});
+
+async function cerrarNavegador(browser) {
+  await new Promise((r) => setTimeout(r, 1000)); // deja que Chrome libere sus archivos
+  try {
+    await browser.close();
+  } catch (err) {
+    console.warn(`Aviso: no se pudo limpiar el perfil temporal del navegador (${err.code || err.message}).`);
+  }
+}
+
+// ============================================================
 // ORQUESTADOR PRINCIPAL
 // ============================================================
 async function main() {
@@ -1524,35 +1592,17 @@ async function main() {
   });
 
   try {
-    const promociones = await scrapearPromociones(browser);
-    const productos = await scrapearProductos(browser);
-    const sucursales = await scrapearSucursales(browser);
+    const promociones = await reintentarSiVacio('promociones', () => scrapearPromociones(browser));
+    const productos = await reintentarSiVacio('productos', () => scrapearProductos(browser));
+    const sucursales = await reintentarSiVacio('sucursales', () => scrapearSucursales(browser));
 
     if (!fs.existsSync(OUTPUT_DIR)) {
       fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     }
 
-    // Guardamos cada sección en su propio archivo JSON dentro de /data
-    fs.writeFileSync(
-      OUTPUT_FILE_PROMOCIONES,
-      JSON.stringify(promociones, null, 2),
-      'utf-8'
-    );
-    console.log(`✔ promociones.json guardado (${promociones.length} ítems) en: ${OUTPUT_FILE_PROMOCIONES}`);
-
-    fs.writeFileSync(
-      OUTPUT_FILE_PRODUCTOS,
-      JSON.stringify(productos, null, 2),
-      'utf-8'
-    );
-    console.log(`✔ productos.json guardado (${productos.length} ítems) en: ${OUTPUT_FILE_PRODUCTOS}`);
-
-    fs.writeFileSync(
-      OUTPUT_FILE_SUCURSALES,
-      JSON.stringify(sucursales, null, 2),
-      'utf-8'
-    );
-    console.log(`✔ sucursales.json guardado (${sucursales.length} ítems) en: ${OUTPUT_FILE_SUCURSALES}`);
+    guardarJson(OUTPUT_FILE_PROMOCIONES, promociones, 'promociones.json');
+    guardarJson(OUTPUT_FILE_PRODUCTOS, productos, 'productos.json');
+    guardarJson(OUTPUT_FILE_SUCURSALES, sucursales, 'sucursales.json');
 
     console.log(
       `\nResumen -> promociones: ${promociones.length} | productos: ${productos.length} | sucursales: ${sucursales.length}`
@@ -1560,7 +1610,7 @@ async function main() {
   } catch (err) {
     console.error('Error general en el scraping:', err);
   } finally {
-    await browser.close();
+    await cerrarNavegador(browser);
   }
 }
 
