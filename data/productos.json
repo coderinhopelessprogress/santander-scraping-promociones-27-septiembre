@@ -3,7 +3,7 @@
     "nombre": "Conocé una nueva forma de manejar tu plata",
     "precio": null,
     "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual hasta el 30/11/2028 o hasta cumplir 32 años, lo que suceda primero",
-    "imagen": "https://www.santander.com.ar/api/images/banner_inversiones_D_9641772e47.webp?updated_at=2026-08-07T15:19:36.218Z",
+    "imagen": "https://www.santander.com.ar/api/images/sorpresa_nuevo_SC_D_b90cd2252b.webp?updated_at=2026-08-27T18:07:10.105Z",
     "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes/super-cuenta",
     "descripción": "Abrí tu cuenta en minutos y manejá todo desde la App",
     "condiciones": "Revisar TyC en la web de Santander.",
@@ -12,7 +12,7 @@
   {
     "nombre": "Cuenta Sueldo",
     "precio": null,
-    "precio_descuento": "Bonificación del 30% en compra y/o venta de Acciones, Bonos y Cedears(3)\n\nConocé más\n\nSuper Ahorro $ disponible 24/7\nPodés disponer de tu dinero cuando vos quieras, las 24 horas, los 7 días de la semana, gracias al nuevo rescate 24/7 disponible para el Ahorro $(9)\n\nConocé más\n\nTasa preferencial en préstamos personales\n\nConocé más\n\nAdelanto de sueldo ¡Por acreditar tu sueldo en Santander, tenés disponible un adelanto de sueldo(6) que podrás solicitar 100% online, en pocos pasos y lo devolvés en 2 cuotas!\n\nConocé más\n\n \n\nY si te adherís a nuestros programa exclusivo de beneficios tenés \n el primer mes 100% bonificado \n\n \n\n\tHasta un 30% en supermercados, combustible, farmacia, indumentaria y mucho más",
+    "precio_descuento": "Bonificación del 30% en compra y/o venta de Acciones, Bonos y Cedears(3)\n\nConocé más\n\nSúper Préstamos Hipotecarios UVA",
     "imagen": "https://www.santander.com.ar/api/images/D_Slide_APP_BENEFICIOS_PROMOCIONES_copia_b0579667f1.jpg?updated_at=2025-11-07T16:00:53.354Z",
     "código": "https://www.santander.com.ar/personas/plan-sueldo",
     "descripción": "Cuenta Sueldo ¡Cobrá tu sueldo u honorario en Santander y aprovechá los mejores beneficios!",
@@ -78,6 +78,16 @@
     "descripción": "Pedí tu crédito prendario con una Tasa Especial del 54,90% | (**) | Elegí qué te querés comprar y simulá tu crédito. | Solo con tu DNI vas a poder verificar si aplicás a la Tasa Especial y obtener la aprobación inmediata. | (**) Podrás solicitarlo si no estás informado/a como deudor/a en la Central de Deudores de BCRA a diciembre 2020. El otorgamiento y aprobación del crédito y de la garantía estará sujeto a aprobación crediticia.",
     "condiciones": "sujeto a aprobación crediticia.",
     "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios"
+  },
+  {
+    "nombre": "Hacé todo desde Super Ahorro Flex",
+    "precio": null,
+    "precio_descuento": null,
+    "imagen": "https://www.santander.com.ar/api/images/D_Slide_DOLARES_copia_18957f3e7d.jpg?updated_at=2025-12-30T21:02:11.964Z",
+    "código": "https://www.santander.com.ar/banco/online/personas/inversiones/super-fondos",
+    "descripción": "Nuevo",
+    "condiciones": "Revisar TyC en la web de Santander.",
+    "url_producto": "https://www.santander.com.ar/banco/online/personas/inversiones/super-fondos"
   },
   {
     "nombre": "Acciones, Bonos y CEDEARs",

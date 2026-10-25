@@ -1,11 +1,41 @@
 [
   {
-    "nombre": "Shopping Days",
+    "nombre": "Open Sports",
     "precio": null,
     "precio_descuento": "25% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_bdd20d43-58c9-4f61-b3ca-4bbc67a84dd0.png",
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_6531f667-749a-44a3-a3ba-f3438766fc6a.png",
     "código": null,
-    "descripción": "Shopping Days | Lista con | beneficio | 25% de ahorro | 25 | DE | AHORRO | Tope de reintegro: $2.000 por compra | Tope mensual: $15.000. | Pagando con | QR | a través de la | App Santander | Válido de 6 h a 11 h en cafeterías, confiterías, bares y más. | Pagando con: | Los días: | Vigencia desde el | 01/09/2026 | hasta el | 31/10/2026",
+    "descripción": "Open Sports | Lista con | beneficio | 25% de ahorro | 25 | DE | AHORRO | Tope de reintegro: $2.000 por compra | Tope mensual: $15.000. | Pagando con | QR | a través de la | App Santander | Válido de 6 h a 11 h en cafeterías, confiterías, bares y más. | Pagando con: | Los días: | Vigencia desde el | 01/09/2026 | hasta el | 31/10/2026",
+    "condiciones": "Revisar TyC en la web de Santander.",
+    "url_producto": null
+  },
+  {
+    "nombre": "Trip",
+    "precio": null,
+    "precio_descuento": "20% de ahorro",
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/Trip_desktopMinImage.png",
+    "código": null,
+    "descripción": "Trip | Lista con | beneficio | SORPRESA | 20% de ahorro + hasta 6 cuotas sin interés | 20 | DE | AHORRO | HASTA | CUOTAS | SIN INTERÉS | Tope de reintegro: $50.000 mensual | Pagando con | QR | a través de la | App Santander | Beneficio exclusivo para clientes suscriptos a | Sorpresa Santander | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/12/2026 | Aplica para: | Tienda online | ¿Todavía no te suscribiste a Sorpresa? | Accedé a los mejores beneficios en combustible, indumentaria, farmacias y más. Con tus primeras compras, ahorras más que el costo de la suscripción. | ¡Sumate ahora!",
+    "condiciones": "Revisar TyC en la web de Santander.",
+    "url_producto": null
+  },
+  {
+    "nombre": "Disco",
+    "precio": null,
+    "precio_descuento": "20% de ahorro",
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_06d27158-1b87-4e38-b537-6b7a5930815e.png",
+    "código": null,
+    "descripción": "Disco | Lista con | beneficio | 20% de ahorro | 20 | DE | AHORRO | Tope de reintegro: $25.000 mensual | Pagando con | QR | a través de la | App Santander | Mínimo de compra $100.000. | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos | Tienda online",
+    "condiciones": "Revisar TyC en la web de Santander.",
+    "url_producto": null
+  },
+  {
+    "nombre": "Supermercados DIA",
+    "precio": null,
+    "precio_descuento": "20% de ahorro",
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_926b9ac2-ea84-4dc4-9217-4ae6d737f161.png",
+    "código": null,
+    "descripción": "Supermercados DIA | Lista con | beneficio | 20% de ahorro | 20 | DE | AHORRO | Tope de reintegro: $20.000 mensual | Pagando con | MODO | a través de la | App Santander | Mínimo de compra $35.000. | Válido presencial y online en todos los locales. | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos | Tienda online",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": null
   },
@@ -40,16 +70,6 @@
     "url_producto": null
   },
   {
-    "nombre": "Despegar",
-    "precio": null,
-    "precio_descuento": "20% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/Despegar_v2_desktopMinImage.png",
-    "código": null,
-    "descripción": "Despegar | Lista con | beneficio | Exclusivo Amex | 20% de ahorro | EXCLUSIVO AMEX | Tope de reintegro: $250.000 durante la vigencia de la promoción | Tope de reintegro: $150.000 durante la vigencia de la promoción | 25% de ahorro | Tope de reintegro: $450.000 durante la vigencia de la promoción | 6 cuotas sin interés | 20 | DE | AHORRO | En hoteles internacionales | Pagando con: | Los días: | Vigencia desde el | 13/10/2026 | hasta el",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": null
-  },
-  {
     "nombre": "Fabric Sushi",
     "precio": null,
     "precio_descuento": "25% de ahorro",
@@ -60,10 +80,20 @@
     "url_producto": null
   },
   {
+    "nombre": "Destino Mendoza",
+    "precio": null,
+    "precio_descuento": null,
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_1fd170cb-1549-4eb0-b459-9baa044b6234.png",
+    "código": null,
+    "descripción": "Destino Mendoza | Lista con | beneficio | EXCLUSIVO AMEX | Beneficios en viajes | Disfrutá de los mejores beneficios en tu próximo viaje a Mendoza. | Conocé los locales adheridos | Pagando con: | Los días: | Vigencia desde el | 20/10/2026 | hasta el | 31/10/2026",
+    "condiciones": "Revisar TyC en la web de Santander.",
+    "url_producto": null
+  },
+  {
     "nombre": "Lollapalooza Argentina 2027",
     "precio": null,
     "precio_descuento": "6 cuotas sin interés",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_31eb1e57-a0eb-4c5b-adc1-b10af881e9d8.png",
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_2296ec4b-f13c-4bc9-9258-a17f9b6149f4.png",
     "código": null,
     "descripción": "Lollapalooza Argentina 2027 | Lista con | beneficio | EXCLUSIVO VISA | Hasta 6 cuotas sin interés | (1) | 12, 13 y 14 de marzo 2027 | | Hipódromo de San Isidro | LOLLAPALOOZA REVELA LOS ARTISTAS | 10 HEADLINERS AL FRENTE DE UNA GRILLA IMPERDIBLE PARA 2027 | Con Travis Scott, Charli xcx, The Killers, TINI, David Guetta, Queens of the Stone Age, The Neighbourhood, Rawayana, Fontaines DC y Sombr en la primera línea del cartel, #LollaAR2027 asegura tres jornadas a la altura de su propia historia. | La decimosegunda edición del festival más importante del calendario argentino vuelve a desplegar el ADN ecléctico que es su sello, con una programación que reúne figuras consagradas y algunos de los nombres que están definiendo el presente de la música global. El pop, el rock, el hip hop y la electrónica vuelven a encontrarse en un cartel que también reserva un lugar destacado para el talento local. | Conocé todos los detalles | Pagando con: | Los días: | Vigencia desde el | 03/06/2026 | hasta el | 14/03/2027 | Adquirí tu entrada en: | LOLLAPALOOZA 2027 | No hay puntos de venta",
     "condiciones": "Revisar TyC en la web de Santander.",
@@ -86,26 +116,6 @@
     "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/Ateneo_desktopMinImage.png",
     "código": null,
     "descripción": "Ateneo | Lista con | beneficio | SORPRESA | 10% de ahorro + hasta 6 cuotas sin interés | 10 | DE | AHORRO | HASTA | CUOTAS | SIN INTERÉS | Tope de reintegro: $20.000 mensual | Pagando a través de la | App Santander | Beneficio exclusivo para clientes suscriptos a | Sorpresa Santander | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/12/2026 | Aplica para: | Locales adheridos | Tienda online | ¿Todavía no te suscribiste a Sorpresa? | Accedé a los mejores beneficios en combustible, indumentaria, farmacias y más. Con tus primeras compras, ahorras más que el costo de la suscripción. | ¡Sumate ahora!",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": null
-  },
-  {
-    "nombre": "Almacén de Pizzas",
-    "precio": null,
-    "precio_descuento": "25% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/Almacen_de_Pizzas_desktopMinImage.png",
-    "código": null,
-    "descripción": "Almacén de Pizzas | Lista con | beneficio | SELECT | 25% de ahorro | 25 | DE | AHORRO | Sin tope de reintegro | Exclusivo con | Tarjetas Santander Visa Black y Platinum | Pagando con: | Los días: | Vigencia desde el | 01/05/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": null
-  },
-  {
-    "nombre": "Alpinestars",
-    "precio": null,
-    "precio_descuento": "15% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_fe6480e0-052e-45c8-b86f-b90a6e898244.png",
-    "código": null,
-    "descripción": "Alpinestars | Lista con | beneficio | EXCLUSIVO VISA | 15% de ahorro + hasta 6 cuotas sin interés | 15 | DE | AHORRO | HASTA | CUOTAS | SIN INTERÉS | Sin tope de reintegro | Pagando con: | Los días: | Vigencia desde el | 04/07/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos | Tienda online",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": null
   },
@@ -142,10 +152,10 @@
   {
     "nombre": "Coto",
     "precio": null,
-    "precio_descuento": "25% de ahorro",
+    "precio_descuento": "30% de ahorro",
     "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/coto_desktopMinImage.png",
     "código": null,
-    "descripción": "Coto | Lista con | beneficio | 25% de ahorro | 25 | DE | AHORRO | Sin tope de reintegro | Pagando con | QR | a través de la | App Santander | Exclusivo presencial. No aplica online. Aplican exclusiones. | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos",
+    "descripción": "Coto | Lista con | beneficio | Exclusivo Visa | 30% de ahorro | EXCLUSIVO VISA | Sin tope de reintegro | 25% de ahorro | 30 | DE | AHORRO | Exclusivo pagando sin contacto desde el celu con | NFC | , a través de | Apple Pay | Google Pay | Exclusivo para locales físicos. No válido para venta online y/o Coto Digital. | El descuento se aplicará en línea de caja, al momento de realizar el pago. | Pagando con: | Los días: | Vigencia desde el | 22/10/2026 | hasta el | 29/10/2026",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": null
   },
@@ -160,22 +170,12 @@
     "url_producto": null
   },
   {
-    "nombre": "Open Sports",
+    "nombre": "Shopping Days",
     "precio": null,
     "precio_descuento": "20% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_6531f667-749a-44a3-a3ba-f3438766fc6a.png",
+    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_bdd20d43-58c9-4f61-b3ca-4bbc67a84dd0.png",
     "código": null,
-    "descripción": "Open Sports | Lista con | beneficio | SORPRESA | 20% de ahorro + hasta 6 cuotas sin interés | 20 | DE | AHORRO | HASTA | CUOTAS | SIN INTERÉS | Tope de reintegro: $50.000 mensual | Pagando con | QR | a través de la | App Santander | Beneficio exclusivo para clientes suscriptos a | Sorpresa Santander | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/12/2026 | Aplica para: | Locales adheridos | Tienda online | ¿Todavía no te suscribiste a Sorpresa? | Accedé a los mejores beneficios en combustible, indumentaria, farmacias y más. Con tus primeras compras, ahorras más que el costo de la suscripción. | ¡Sumate ahora!",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": null
-  },
-  {
-    "nombre": "Trip",
-    "precio": null,
-    "precio_descuento": "20% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/Trip_desktopMinImage.png",
-    "código": null,
-    "descripción": "Trip | Lista con | beneficio | SORPRESA | 20% de ahorro + hasta 6 cuotas sin interés | 20 | DE | AHORRO | HASTA | CUOTAS | SIN INTERÉS | Tope de reintegro: $50.000 mensual | Pagando con | QR | a través de la | App Santander | Beneficio exclusivo para clientes suscriptos a | Sorpresa Santander | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/12/2026 | Aplica para: | Tienda online | ¿Todavía no te suscribiste a Sorpresa? | Accedé a los mejores beneficios en combustible, indumentaria, farmacias y más. Con tus primeras compras, ahorras más que el costo de la suscripción. | ¡Sumate ahora!",
+    "descripción": "Shopping Days | Lista con | beneficio | EXCLUSIVO AMEX | 20% de ahorro + hasta 6 cuotas sin interés | 20 | DE | AHORRO | HASTA | CUOTAS | SIN INTERÉS | Sin tope de reintegro | Conocé los locales adheridos | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/10/2026",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": null
   },
@@ -186,16 +186,6 @@
     "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/chango_masdesktopMinImage.png",
     "código": null,
     "descripción": "ChangoMás | Lista con | beneficio | 20% de ahorro | 20 | DE | AHORRO | Tope de reintegro: $25.000 mensual | Pagando con | MODO | a través de la | App Santander | Mínimo de compra: $75.000. Válido en compras presenciales y online. | Pagando con: | Los días: | Vigencia desde el | 01/07/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos",
-    "condiciones": "Revisar TyC en la web de Santander.",
-    "url_producto": null
-  },
-  {
-    "nombre": "Disco",
-    "precio": null,
-    "precio_descuento": "20% de ahorro",
-    "imagen": "https://microfe.santander.com.ar/premify/benefits/assets/images/brand_06d27158-1b87-4e38-b537-6b7a5930815e.png",
-    "código": null,
-    "descripción": "Disco | Lista con | beneficio | 20% de ahorro | 20 | DE | AHORRO | Tope de reintegro: $25.000 mensual | Pagando con | QR | a través de la | App Santander | Mínimo de compra $100.000. | Pagando con: | Los días: | Vigencia desde el | 01/10/2026 | hasta el | 31/10/2026 | Aplica para: | Locales adheridos | Tienda online",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": null
   },
