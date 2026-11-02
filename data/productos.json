@@ -50,16 +50,6 @@
     "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios#1_Personas"
   },
   {
-    "nombre": "Súper Préstamo Personal",
-    "precio": "42%",
-    "precio_descuento": null,
-    "imagen": "https://www.santander.com.ar/api/images/ico_rojo_energia_solar_a9e16e81b2.png?updated_at=2023-12-27T16:53:40.746Z",
-    "código": "https://www.santander.com.ar/personas/prestamos/sustentables",
-    "descripción": null,
-    "condiciones": "Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Tasa Fija Nominal Anual: 42%. | Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor.",
-    "url_producto": "https://www.santander.com.ar/personas/prestamos/sustentables"
-  },
-  {
     "nombre": "¿Compraste con débito y ahora necesitás el efectivo?",
     "precio": "76,00%",
     "precio_descuento": null,
