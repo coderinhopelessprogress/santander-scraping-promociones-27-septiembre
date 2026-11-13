@@ -2,7 +2,7 @@
   {
     "nombre": "Conocé una nueva forma de manejar tu plata",
     "precio": null,
-    "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual hasta el 30/11/2028 o hasta cumplir 32 años, lo que suceda primero",
+    "precio_descuento": "bonificación del 100% de la comisión de mantenimiento mensual hasta el 31/12/2028 o hasta cumplir 32 años, lo que suceda primero",
     "imagen": "https://www.santander.com.ar/api/images/sorpresa_nuevo_SC_D_b90cd2252b.webp?updated_at=2026-08-27T18:07:10.105Z",
     "código": "https://www.santander.com.ar/personas/cuentas-y-paquetes/super-cuenta",
     "descripción": "Abrí tu cuenta en minutos y manejá todo desde la App",
@@ -48,6 +48,16 @@
     "descripción": "Con un Súper Préstamo Prendario podés moverte hacia lo que querés.",
     "condiciones": "Revisar TyC en la web de Santander.",
     "url_producto": "https://www.santander.com.ar/personas/prendarios/prestamos-prendarios#1_Personas"
+  },
+  {
+    "nombre": "Súper Préstamo Personal",
+    "precio": "42%",
+    "precio_descuento": null,
+    "imagen": "https://www.santander.com.ar/api/images/ico_rojo_energia_solar_a9e16e81b2.png?updated_at=2023-12-27T16:53:40.746Z",
+    "código": "https://www.santander.com.ar/personas/prestamos/sustentables",
+    "descripción": null,
+    "condiciones": "Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor. | Tasa Fija Nominal Anual: 42%. | Comisión por cancelación anticipada: 4% + IVA. | comisión por cancelación anticipada total sólo será aplicada si dicha pre-cancelación se realiza dentro de los primeros 180 días o dentro de la primera cuarta parte del plazo de vigencia del préstamo, de ambos el mayor.",
+    "url_producto": "https://www.santander.com.ar/personas/prestamos/sustentables"
   },
   {
     "nombre": "¿Compraste con débito y ahora necesitás el efectivo?",

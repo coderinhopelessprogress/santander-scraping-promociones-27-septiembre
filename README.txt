@@ -25,7 +25,7 @@ Los archivos de data/ se generan (y se sobreescriben) cada vez que se corre node
  Configuración
 Al inicio de index.js, el objeto CONFIG expone dos flags:
 - HEADLESS (por defecto true): corre el navegador sin ventana visible. Para debugging manual se puede poner en false.
-- DEBUG (por defecto false): habilita logs verbosos y una captura de pantalla de diagnóstico (data/debug-sucursales.png) durante el módulo de sucursales. Se recomienda dejarlo en false para una corrida desatendida.
+- DEBUG (por defecto false): habilita logs extensos y una captura de pantalla de diagnóstico (data/debug-sucursales.png) durante el módulo de sucursales. Se recomienda dejarlo en false para una corrida desatendida.
 
  Uso
 1. Instalar las dependencias: npm install
@@ -37,7 +37,7 @@ Al inicio de index.js, el objeto CONFIG expone dos flags:
    - ./data/sucursales.json: número identificador, nombre y dirección (calle, altura y barrio) de las sucursales cercanas.
    El contenido exacto de los tres archivos varía en cada corrida, porque refleja el estado real del sitio en ese momento (las promociones rotan).
 
- Cómo funciona (resumen)
+ Cómo funciona (en resumen)
 1. Abre un único navegador (Chrome detectado automáticamente) y ejecuta tres módulos en orden: promociones, productos y sucursales.
 2. Promociones: mientras la página de beneficios carga, escucha las respuestas de red (page.on('response')) y busca, entre las que devuelven JSON, un array con forma de listado de beneficios (función pareceListaDeBeneficios), sin asumir el nombre de ningún endpoint. Si lo encuentra, usa esos datos ya estructurados. Si no, cae a una extracción por DOM: detecta las tarjetas y hace click en cada una para leer su detalle.
 3. Productos: recorre 6 páginas hub (cuentas-y-tarjetas, prestamos/todos-los-prestamos, prendarios/prestamos-prendarios, inversiones, cuentas-y-paquetes y seguros). En cada una toma los links de producto y entra a cada detalle. Si un hub no tiene links de detalle, extrae las tarjetas directamente del hub.
@@ -46,16 +46,16 @@ Al inicio de index.js, el objeto CONFIG expone dos flags:
 6. Si un módulo termina vacío después de los reintentos y ya existe una versión previa del archivo en data/, se conserva la anterior en lugar de pisarla con un array vacío.
 7. Al final guarda los tres JSON, informa por consola la cantidad de ítems de cada uno y muestra un resumen. Si algún módulo falló, aparece una línea con la marca ⚠.
 
- Resultado de la última corrida (02/11/2026)
-- Promociones: 20 tarjetas candidatas detectadas, 18 promociones guardadas. La API de beneficios no fue identificada, por lo que se usó la extracción por DOM (respaldo).
-- Productos: 15 productos únicos procesados en las 6 categorías. Se descartaron 6 resultados que no eran productos: 4 títulos de sección ("Cuentas y Paquetes") en cuentas-y-tarjetas y 2 enlaces que respondieron con la página de error del sitio ("Parece que esta página se perdió") en préstamos. Las categorías prendarios y cuentas-y-paquetes no tienen links de detalle, por lo que se extrajeron sus tarjetas del hub.
+ Resultado de la última corrida (10/11/2026)
+- Promociones: 22 tarjetas candidatas detectadas, 17 promociones guardadas. La API de beneficios no fue identificada, por lo que se usó la extracción por DOM (respaldo).
+- Productos: 16 productos únicos procesados en las 6 categorías. Se descartaron 5 resultados que no eran productos: 4 títulos de sección ("Cuentas y Paquetes") en cuentas-y-tarjetas y 1 enlace que respondió con la página de error del sitio ("Parece que esta página se perdió") en préstamos. Las categorías prendarios y cuentas-y-paquetes no tienen links de detalle, por lo que se extrajeron sus tarjetas del hub.
 - Sucursales: 10 sucursales guardadas.
 - No hubo módulos con fallas (ninguna línea con ⚠).
 
- Cambios respecto a la entrega anterior (corrida del 24/10: 20 promociones, 16 productos, 10 sucursales)
+ Cambios respecto a la entrega anterior (corrida del 02/11: 18 promociones, 15 productos, 10 sucursales)
 El sitio actualiza sus promociones y su catálogo periódicamente, así que es normal que las cantidades varíen entre corridas:
-- Las promociones pasaron de 20 a 18 por la rotación normal de beneficios.
-- Los productos pasaron de 16 a 15: en la corrida anterior figuraba "Súper Préstamo Personal", cuyo enlace en esta corrida respondió con la página de error del sitio y fue descartado por el filtro de no-productos.
+- Las promociones pasaron de 18 a 17 por la rotación normal de beneficios.
+- Los productos pasaron de 15 a 16: "Súper Préstamo Personal", que en la corrida anterior había respondido con la página de error del sitio y fue descartado por el filtro, volvió a cargar correctamente.
 - Las sucursales se mantienen en 10.
 - No hubo cambios en el código (index.js).
 
@@ -90,7 +90,10 @@ El sitio ocasionalmente falla al navegar (timeouts, o el error "Navigating frame
 Los campos que el sitio no expone quedan en null.
 
  Solución de problemas comunes
-- Error: Could not find Chrome (ver. X.X.X.X): el script busca el navegador automáticamente en este orden: (1) la variable de entorno CHROME_PATH, si está definida; (2) el Chrome que descarga Puppeteer; (3) un Chrome instalado en el sistema (rutas habituales de Windows, macOS y Linux). Si no encuentra ninguno, correr npx puppeteer browsers install chrome en la carpeta del proyecto. Si el entorno bloquea esa descarga (antivirus o firewall), alcanza con tener Google Chrome instalado, o indicar su ruta con CHROME_PATH.
+- Error: Could not find Chrome (ver. X.X.X.X): el script busca el navegador automáticamente en este orden: 
+ (1) la variable de entorno CHROME_PATH, si está definida; 
+ (2) el Chrome que descarga Puppeteer; 
+ (3) un Chrome instalado en el sistema (rutas habituales de Windows, macOS y Linux). Si no encuentra ninguno, correr npx puppeteer browsers install chrome en la carpeta del proyecto. Si el entorno bloquea esa descarga (antivirus o firewall), alcanza con tener Google Chrome instalado, o indicar su ruta con CHROME_PATH.
 - Algún módulo devuelve un array vacío o aparece una línea con ⚠: revisar la consola, ya que el script loguea en qué paso se cortó (timeout de selector, error de página, etc.). Volver a correr suele resolverlo cuando el fallo es transitorio. Activar CONFIG.DEBUG = true agrega logs adicionales y una captura de pantalla del módulo de sucursales.
 
  Pendientes / próximas mejoras (no bloqueantes para esta entrega)
